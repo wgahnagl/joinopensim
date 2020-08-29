@@ -1,94 +1,129 @@
-
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+
 <body>
 
-<div class="navbar">
-	<a href="#">Apps</a>
-	<a href="#">Sponsors</a>
-	<a href="#">Code</a>	
-	<a href="#">Wiki</a>
-    <a href="#" class="right">Link</a>
-</div>
-
-<div class="intro-container"> 
-    <div class = "header"> 
-        <h1> OpenSimulator </h1>
-        <p> join a community of over 100,000 people in a fully customizable, user run virtual universe. Socialize, create, and explore in a growing network of handmade realms.</p>
+    <div class="navbar">
+        <a href="#">Apps</a>
+        <a href="#">Sponsors</a>
+        <a href="#">Code</a>
+        <a href="#">Wiki</a>
+        <a href="#" class="right">Link</a>
     </div>
-    <div class = "hillside"> 
-        <svg viewBox="0 0 500 500" preserveAspectRatio="none">
-        <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z"></path>
-        </svg>
+
+    <div class="intro container">
+        <div class="header">
+            <h1> OpenSimulator </h1>
+            <p> join a community of over 100,000 people in a fully customizable, user run virtual universe. Socialize, create, and explore in a growing network of handmade realms.</p>
+        </div>
+        <div class="hillside">
+            <svg viewBox="0 0 500 500" preserveAspectRatio="none">
+                <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z"></path>
+            </svg>
+
+        </div>
+    </div>
+
+    <div>
+        <div class="carousel">
+            <ul class="slides">
+                <input type="radio" name="radio-buttons" id="img-1" checked />
+                <li class="slide-container">
+                    <div class="slide-image">
+                        <img src="../static/images/cabin.jpg">
+                    </div>
+                    <div class="carousel-controls">
+                        <label for="img-3" class="prev-slide">
+                            <span>&lsaquo;</span>
+                        </label>
+                        <label for="img-2" class="next-slide">
+                            <span>&rsaquo;</span>
+                        </label>
+                    </div>
+                </li>
+                <input type="radio" name="radio-buttons" id="img-2" />
+                <li class="slide-container">
+                    <div class="slide-image">
+                        <img src="../static/images/castle.jpg">
+                    </div>
+                    <div class="carousel-controls">
+                        <label for="img-1" class="prev-slide">
+                            <span>&lsaquo;</span>
+                        </label>
+                        <label for="img-3" class="next-slide">
+                            <span>&rsaquo;</span>
+                        </label>
+                    </div>
+                </li>
+                <input type="radio" name="radio-buttons" id="img-3" />
+                <li class="slide-container">
+                    <div class="slide-image">
+                        <img src="../static/images/hauntedForest.jpg">
+                    </div>
+                    <div class="carousel-controls">
+                        <label for="img-2" class="prev-slide">
+                            <span>&lsaquo;</span>
+                        </label>
+                        <label for="img-1" class="next-slide">
+                            <span>&rsaquo;</span>
+                        </label>
+                    </div>
+                </li>
+                <div class="carousel-dots">
+                    <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+                    <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+                    <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="feature container">
+            <div class="image">
+                <img src="../static/images/graphic-design.svg">
+            </div>
+            <div class="content">
+                <h1> create some cool shit </h1>
+                <p> design cool hangouts. Go there. Do it who cares lorem ipsum lorem ipsmum lorem ipsum</p>
+            </div>
+        </div>
+        <div class="feature container">
+            <div class="content">
+                <h1> create some cool shit </h1>
+                <p> design cool hangouts. Go there. Do it who cares</p>
+            </div>
+            <div class="image">
+                <img src="../static/images/graphic-design.svg">
+            </div>
+
+        </div>
+        <div class="feature container">
+            <div class="image">
+                <img src="../static/images/graphic-design.svg">
+            </div>
+
+            <div class="content">
+                <h1> create some cool shit </h1>
+                <p> design cool hangouts. Go there. Do it who cares</p>
+            </div>
+        </div>
 
     </div>
-</div>
+    </div>
+    <button> aaa </button>
 
-<div>
-  <div class="carousel">
-    <ul class="slides">
-      <input type="radio" name="radio-buttons" id="img-1" checked />
-      <li class="slide-container">
-        <div class="slide-image">
-          <img src="../static/images/cabin.jpg">
-        </div>
-        <div class="carousel-controls">
-          <label for="img-3" class="prev-slide">
-            <span>&lsaquo;</span>
-          </label>
-          <label for="img-2" class="next-slide">
-            <span>&rsaquo;</span>
-          </label>
-        </div>
-      </li>
-      <input type="radio" name="radio-buttons" id="img-2" />
-      <li class="slide-container">
-        <div class="slide-image">
-          <img src="../static/images/castle.jpg">
-        </div>
-        <div class="carousel-controls">
-          <label for="img-1" class="prev-slide">
-            <span>&lsaquo;</span>
-          </label>
-          <label for="img-3" class="next-slide">
-            <span>&rsaquo;</span>
-          </label>
-        </div>
-      </li>
-      <input type="radio" name="radio-buttons" id="img-3" />
-      <li class="slide-container">
-        <div class="slide-image">
-          <img src="../static/images/hauntedForest.jpg">
-        </div>
-        <div class="carousel-controls">
-          <label for="img-2" class="prev-slide">
-            <span>&lsaquo;</span>
-          </label>
-          <label for="img-1" class="next-slide">
-            <span>&rsaquo;</span>
-          </label>
-        </div>
-      </li>
-      <div class="carousel-dots">
-        <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
-        <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
-        <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
-      </div>
-    </ul>
-  </div>
-</div>
+    <div class="footer">
+        <h2>Footer</h2>
+        <div class="credits">
+            <div>Icons made by: <a href="https://www.flaticon.com/free-icon/computer_2905292" title="xnimrodx">xnimrodx</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
-<div class="row">
-  <div class="side">LOREM IPSUM TEXT BABEY </div>
-  <div class="main">LOREM MOTHERFUCKIN IPSUM</div>
-</div>
-
- <div class="footer">
-  <h2>Footer</h2>
-</div> <Paste>
+        </div>
+    </div>
+    <Paste>
 </body>
-</html>
 
+</html>

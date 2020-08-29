@@ -1,75 +1,104 @@
 /* pt-sans-regular - latin */
 @font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/pt-sans-v11-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('PT Sans'), local('PTSans-Regular'),
-       url('../fonts/pt-sans-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/pt-sans-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/pt-sans-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/pt-sans-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/pt-sans-v11-latin-regular.svg#PTSans') format('svg'); /* Legacy iOS */
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/pt-sans-v11-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local('PT Sans'), local('PTSans-Regular'),
+        url('../fonts/pt-sans-v11-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/pt-sans-v11-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/pt-sans-v11-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/pt-sans-v11-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/pt-sans-v11-latin-regular.svg#PTSans') format('svg');
+    /* Legacy iOS */
 }
 
 /* alef-regular - latin */
 @font-face {
-  font-family: 'Alef';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/alef-v11-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Alef Regular'), local('Alef-Regular'),
-       url('../fonts/alef-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/alef-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/alef-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/alef-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/alef-v11-latin-regular.svg#Alef') format('svg'); /* Legacy iOS */
+    font-family: 'Alef';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/alef-v11-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local('Alef Regular'), local('Alef-Regular'),
+        url('../fonts/alef-v11-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/alef-v11-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/alef-v11-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/alef-v11-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/alef-v11-latin-regular.svg#Alef') format('svg');
+    /* Legacy iOS */
 }
 
 /* source-sans-pro-regular - latin */
 @font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/source-sans-pro-v13-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'),
-       url('../fonts/source-sans-pro-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/source-sans-pro-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/source-sans-pro-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/source-sans-pro-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/source-sans-pro-v13-latin-regular.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/source-sans-pro-v13-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'),
+        url('../fonts/source-sans-pro-v13-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/source-sans-pro-v13-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/source-sans-pro-v13-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/source-sans-pro-v13-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/source-sans-pro-v13-latin-regular.svg#SourceSansPro') format('svg');
+    /* Legacy iOS */
 }
 
+:root {
+    --accent-color: #1B1C22;
+    --background-color: #262730;
+    --text-color: #E3E9ED;
+    --text-alt-color: #b8d7e0;
+    --text-accent-color: #AFBDC7;
+    --hover-color: #ddd;
+    --carousel-color: #fff;
+}
 
 body {
-  background-color: #262730;
+    background-color: var(--background-color);
 }
 
-.intro-container{
-  position: relative;
-  text-align: center;
-  vertical-align: middle;
-  height: 400px;
- 	
+.intro {
+    text-align: center;
+    vertical-align: middle;
+    height: 400px;
+
 }
-svg{
-	height:150%;
-	width:100%;
-	stroke: none;
-	fill: #1B1C22;
+
+svg {
+    height: 150%;
+    width: 100%;
+    stroke: none;
+    fill: var(--accent-color);
 }
-.hillside{
-    height:100%;
-	width: 100%;
-	position: absolute;
+
+.hillside {
+    height: 100%;
+    width: 100%;
+    position: absolute;
     left: 0;
     top: 0;
-	z-index: -1;
+    z-index: -1;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
+html,
+body {
+    margin: 0;
+    padding: 0;
 }
 
 .carousel {
@@ -97,12 +126,12 @@ ul.slides {
 }
 
 ul.slides input {
-    display: none; 
+    display: none;
 }
 
 
-.slide-container { 
-    display: block; 
+.slide-container {
+    display: block;
 }
 
 .slide-image {
@@ -113,13 +142,13 @@ ul.slides input {
     top: 0;
     opacity: 0;
     transition: all .7s ease-in-out;
-}   
+}
 
 .slide-image img {
     width: 100%;
     height: 100%;
     overflow: hidden;
-      object-fit: cover;
+    object-fit: cover;
 }
 
 .carousel-controls {
@@ -130,7 +159,7 @@ ul.slides input {
     z-index: 999;
     font-size: 100px;
     line-height: 600px;
-    color: #fff;
+    color: var(--carousel-color);
 }
 
 .carousel-controls label {
@@ -142,7 +171,7 @@ ul.slides input {
     cursor: pointer;
 }
 
-.slide-image:hover + .carousel-controls label{
+.slide-image:hover+.carousel-controls label {
     opacity: 0.5;
 }
 
@@ -176,128 +205,170 @@ ul.slides input {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: var(--carousel-color);
     opacity: 0.5;
     margin: 10px;
 }
 
-input:checked + .slide-container .slide-image {
+input:checked+.slide-container .slide-image {
     opacity: 1;
     transform: scale(1);
     transition: opacity 1s ease-in-out;
 }
 
-input:checked + .slide-container .carousel-controls label {
-     display: block; 
+input:checked+.slide-container .carousel-controls label {
+    display: block;
 }
 
-input#img-1:checked ~ .carousel-dots label#img-dot-1,
-input#img-2:checked ~ .carousel-dots label#img-dot-2,
-input#img-3:checked ~ .carousel-dots label#img-dot-3,
-input#img-4:checked ~ .carousel-dots label#img-dot-4,
-input#img-5:checked ~ .carousel-dots label#img-dot-5,
-input#img-6:checked ~ .carousel-dots label#img-dot-6 {
-	opacity: 1;
+input#img-1:checked~.carousel-dots label#img-dot-1,
+input#img-2:checked~.carousel-dots label#img-dot-2,
+input#img-3:checked~.carousel-dots label#img-dot-3,
+input#img-4:checked~.carousel-dots label#img-dot-4,
+input#img-5:checked~.carousel-dots label#img-dot-5,
+input#img-6:checked~.carousel-dots label#img-dot-6 {
+    opacity: 1;
 }
 
 
-input:checked + .slide-container .nav label { display: block; }
+input:checked+.slide-container .nav label {
+    display: block;
+}
 
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.feature {
+    display: flex;
+    font-family: 'PT Sans';
+    color: var(--text-color);
+    align-items: center;
+    justify-content: space-between;
+    margin: 100px auto;
+}
+
+.feature img {
+    width: 150px;
+    height: 150px
+}
+
+.feature .image {
+    max-width: 20%;
+}
+
+.feature .content {
+    width: 80%;
+    display: inline-block;
+    margin-left: 50px;
+}
 
 .header {
-  padding-top: 20px;
-  display: inline-block;
-  text-align: center; /* center the text */
-  color: #709099;
-  font-family: 'PT Sans';
+    display: inline-block;
+    text-align: center;
+    /* center the text */
+    color: var(--text-color);
+    font-family: 'PT Sans';
 }
 
 .header h1 {
-  font-size: 74px;
+    font-size: 74px;
 }
-.header p {
-	color: #b8d7e0;
-	font-size: 20px;
-	max-width: 500px;
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+p {
+    color: var(--text-accent-color);
+    font-size: 20px;
 }
 
 /* Style the top navigation bar */
 .navbar {
-  overflow: hidden; /* Hide overflow */
+    overflow: hidden;
+    /* Hide overflow */
 }
 
 /* Style the navigation bar links */
 .navbar a {
-  float: left; /* Make sure that the links stay side-by-side */
-  display: block; /* Change the display to block, for responsive reasons (see below) */
-  color: #709099; /* light blue text color */
-  text-align: center; /* Center the text */
-  padding: 14px 20px; /* Add some padding */
-  text-decoration: none; /* Remove underline */
+    float: left;
+    /* Make sure that the links stay side-by-side */
+    display: block;
+    /* Change the display to block, for responsive reasons (see below) */
+    color: var(--text-color);
+    /* light blue text color */
+    text-align: center;
+    /* Center the text */
+    padding: 14px 20px;
+    /* Add some padding */
+    text-decoration: none;
+    /* Remove underline */
 
-  font-family: 'PT Sans';
+    font-family: 'PT Sans';
 }
 
 /* Right-aligned link */
 .navbar a.right {
-  float: right; /* Float a link to the right */
+    float: right;
+    /* Float a link to the right */
 }
 
 /* Change color on hover/mouse-over */
 .navbar a:hover {
-  background-color: #ddd; /* Grey background color */
-  color: black; /* Black text color */
+    background-color: var(--hover-color);
+    /* Grey background color */
+    color: black;
+    /* Black text color */
 }
 
 /* Ensure proper sizing */
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-/* Column container */
-.row {
-  display: n aflex;
-  flex-wrap: wrap;
-}
-
-
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  flex: 30%; /* Set the width of the sidebar */
-  padding: 20px; /* Some padding */
-  color: #709099
-}
-
-/* Main column */
-.main {
-  flex: 70%; /* Set the width of the main content */
-
-
-  padding: 20px; /* Some padding */
-  color: #709099
-}
-
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {
-    flex-direction: column;
-  }
-}
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
 }
 
- .footer {
-  padding: 20px; /* Some padding */
-  text-align: center; /* Center text*/
-  background: #1B1C22; /* Grey background */
-  font-family: 'Source Sans Pro';
-  color: #709099;
+.footer {
+    padding: 20px;
+    /* Some padding */
+    text-align: center;
+    /* Center text*/
+    background: var(--accent-color);
+    /* Grey background */
+    font-family: 'Source Sans Pro';
+    color: var(--text-color);
+}
+
+/* visited link */
+a:visited {
+    color: var(--text-accent-color);
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: var(--text-accent-color);
+    text-decoration: none;
+}
+
+a:link {
+    color: var(--text-accent-color);
+    text-decoration: none;
 }
