@@ -70,6 +70,8 @@
 
 body {
     background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'PT Sans';
 }
 
 .intro {
@@ -241,7 +243,6 @@ input:checked+.slide-container .nav label {
 
 .feature {
     display: flex;
-    font-family: 'PT Sans';
     color: var(--text-color);
     align-items: center;
     justify-content: space-between;
@@ -263,29 +264,66 @@ input:checked+.slide-container .nav label {
     margin-left: 50px;
 }
 
+.feature-type {
+    display: flex;
+    margin: 100px auto;
+    align-items: center;
+    justify-content: space-between;
+
+   }
+
+.feature-type .personal{
+    flex: 1 1 50%;
+    text-align: center;
+    padding: 0 15px;
+
+}
+
+.feature-type .host {
+    flex: 1 1 50%;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.biglink{
+    font-size: 25px;
+    text-decoration: underline;
+}
+
 .header {
     display: inline-block;
     text-align: center;
-    /* center the text */
-    color: var(--text-color);
-    font-family: 'PT Sans';
 }
 
 .header h1 {
     font-size: 74px;
+    font-family: 'Source Sans Pro';
 }
 
-.button {
-    background-color: #4CAF50;
+h1 {
+    font-family: 'Source Sans Pro';
+}
+
+.center {
+    text-align: center;
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+}
+
+button {
+    background-color: var(--text-color);
+    color: var(--background-color);
     border: none;
-    color: white;
     padding: 15px 32px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 18px;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: 8px;
 }
 
 p {
@@ -293,51 +331,33 @@ p {
     font-size: 20px;
 }
 
-/* Style the top navigation bar */
 .navbar {
     overflow: hidden;
     /* Hide overflow */
 }
 
-/* Style the navigation bar links */
 .navbar a {
     float: left;
-    /* Make sure that the links stay side-by-side */
     display: block;
-    /* Change the display to block, for responsive reasons (see below) */
-    color: var(--text-color);
-    /* light blue text color */
     text-align: center;
-    /* Center the text */
     padding: 14px 20px;
-    /* Add some padding */
     text-decoration: none;
-    /* Remove underline */
-
-    font-family: 'PT Sans';
 }
 
-/* Right-aligned link */
 .navbar a.right {
     float: right;
-    /* Float a link to the right */
 }
 
-/* Change color on hover/mouse-over */
 .navbar a:hover {
     background-color: var(--hover-color);
-    /* Grey background color */
     color: black;
-    /* Black text color */
 }
 
-/* Ensure proper sizing */
 * {
     box-sizing: border-box;
 }
 
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
     .navbar a {
         float: none;
@@ -347,13 +367,9 @@ p {
 
 .footer {
     padding: 20px;
-    /* Some padding */
     text-align: center;
-    /* Center text*/
     background: var(--accent-color);
-    /* Grey background */
     font-family: 'Source Sans Pro';
-    color: var(--text-color);
 }
 
 /* visited link */

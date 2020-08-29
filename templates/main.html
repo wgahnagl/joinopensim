@@ -1,23 +1,12 @@
-<!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="../static/css/style.css">
-
+{% extends "components/base.html" %}
+{% block body %}
 <body>
-
-    <div class="navbar">
-        <a href="#">Apps</a>
-        <a href="#">Sponsors</a>
-        <a href="#">Code</a>
-        <a href="#">Wiki</a>
-        <a href="#" class="right">Link</a>
-    </div>
-
     <div class="intro container">
         <div class="header">
             <h1> OpenSimulator </h1>
             <p> join a community of over 100,000 people in a fully customizable, user run virtual universe. Socialize, create, and explore in a growing network of handmade realms.</p>
+            <button><b> Get Started </b></button>
+            <button><b> How it works </b></button>
         </div>
         <div class="hillside">
             <svg viewBox="0 0 500 500" preserveAspectRatio="none">
@@ -113,17 +102,21 @@
         </div>
 
     </div>
+    <div class="container center">
+        <button href="/servers"> <b> Get Started </b> </button>
     </div>
-    <button> aaa </button>
-
-    <div class="footer">
-        <h2>Footer</h2>
-        <div class="credits">
-            <div>Icons made by: <a href="https://www.flaticon.com/free-icon/computer_2905292" title="xnimrodx">xnimrodx</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-
+    <div class="container feature-type">
+        <div class="personal">
+            <img class="icon" src="../static/images/group.svg">
+            <p> Join a community of people who like this stuff </p>
+            <a class="biglink" href="/community"> Join A Server ></a>
+        </div>
+        <div class="host">
+            <img class="icon" src="../static/images/server.svg">
+            <p> have total creative freedom over your own realm in the metaverse. Code stuff, write scripts, go wild who cares I'm not a cop</p>
+            <a class="biglink" href="/docs"> Host Your Own ></a>
         </div>
     </div>
-    <Paste>
+    </div>
 </body>
-
-</html>
+{% endblock %}
