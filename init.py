@@ -5,12 +5,11 @@ import os.path
 from functools import wraps
 from flask_sqlalchemy import SQLAlchemy
 import config
-import datetime
+from datetime import datetime
 from apscheduler.schedulers.background import BackgroundScheduler
 
 app = Flask(__name__)
 app.config ['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///sites/opensim.sqlite3'
-
 
 db = SQLAlchemy(app)
 class Grids(db.Model):
@@ -43,50 +42,62 @@ class Grids(db.Model):
         self.users = users
         self.active_users = active_users
 
-db.create_all()
 
-def getWikiDataMain():
-    getWikiData("Main_Page")
-    print("getting wiki data")
-
-def getWikiData(page):
+def getSiteData(): 
     if not os.path.isdir('sites'):
         os.mkdir('sites')
+    db.create_all()
+
+    print("getting wiki data")
+    getWikiData("Main_Page")
+    
+    print("getting grid data")
+    getGridData()
+
+def getWikiData(page):
     if not os.path.isdir('sites/wiki'):
         os.mkdir('sites/wiki')
 
     if not os.path.isfile('sites/wiki/' + page):
         pageUrl = 'http://opensimulator.org/wiki/' + page
         pageRequest = requests.get(pageUrl)
-        open('sites/wiki/' + page, 'wb').write(pageRequest.content).close()
+        f = open('sites/wiki/' + page, 'wb')
+        f.write(pageRequest.content)
+        f.close()
 
 def getGridData(): 
-    print("getting grid data")
-    if not os.path.isdir('sites'):
-        os.mkdir('sites')
     if not os.path.isdir('sites/hgbusiness'):
         os.mkdir('sites/hgbusiness')
 
     if not os.path.isfile('sites/hgbusiness/grids'):
         pageUrl = 'https://www.hypergridbusiness.com/statistics/opensim-grid-list/'
         pageRequest = requests.get(pageUrl)
-        open('sites/hgbusiness/grids', 'wb').write(pageRequest.content).close()
+        f = open('sites/hgbusiness/grids','wb')
+        f.write(pageRequest.content)
+        f.close()
 
     if not os.path.isfile('sites/hgbusiness/gridinfo'):
         pageUrl = 'https://www.hypergridbusiness.com/statistics/opensim-grid-info/'
         pageRequest = requests.get(pageUrl)
-        open('sites/hgbusiness/gridinfo', 'wb').write(pageRequest.content).close()
+        f = open('sites/hgbusiness/gridinfo', 'wb')
+        f.write(pageRequest.content)
+        f.close() 
 
     if not os.path.isfile('sites/hgbusiness/gridaddress'):
         pageUrl = 'https://www.hypergridbusiness.com/statistics/active-grids/'
         pageRequest = requests.get(pageUrl)
-        open('sites/hgbusiness/gridaddress', 'wb').write(pageRequest.content).close()
+        f = open('sites/hgbusiness/gridaddress', 'wb')
+        f.write(pageRequest.content)
+        f.close() 
+    
 
     if not os.path.isfile('sites/hgbusiness/gridstats'):
-        pageUrl = 'https://www.hypergridbusiness.com/statistics/'+cfg['month']+'-'+datetime.datetime.now().year + '-opensim-grid-stats/'
+        cfg = config.Config('config.cfg')
+        pageUrl = 'https://www.hypergridbusiness.com/statistics/'+ cfg['month']+'-'+ str(datetime.now().year) + '-opensim-grid-stats/'
         pageRequest = requests.get(pageUrl)
-        open('sites/hgbusiness/gridstats', 'wb').write(pageRequest.content).close()
-
+        f = open('sites/hgbusiness/gridstats', 'wb')
+        f.write(pageRequest.content)
+        f.close() 
 
     grids = open("sites/hgbusiness/grids")
     gridInfo = open("sites/hgbusiness/gridinfo")
@@ -165,13 +176,15 @@ def getGridData():
     gridStats.close()
 
 sched = BackgroundScheduler(daemon=True)
-sched.add_job(getGridData,'interval',minutes=1440)
-sched.add_job(getWikiDataMain,'interval',minutes=1440)
+sched.add_job(getSiteData,'interval',minutes=1440)
 sched.start()
 
 def before_request(func):
     @wraps(func)
-    def wrapped_function(*args, **kwargs):
+    def wrapped_function(*args, **kwargs): 
+        if not os.path.isdir('sites'):
+            getSiteData()
+
         info = {
                 "usersOnline": 100000,
                 }
