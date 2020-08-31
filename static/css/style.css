@@ -383,15 +383,66 @@ p {
     max-width: 800px;
 }
 
+.sidebar-layout {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 260px minmax(300px, 820px);
+    grid-template-rows: auto;
+    margin-bottom: 30px;
+}
+
+
+.sidebar-container {
+    max-width: 1080px;
+    margin: 50px auto;
+}
+
+.sidebar {
+    font-weight: bold;
+}
+
+.sidebar ul li {
+    font-family: "PT sans"; 
+    font-size: 15px;
+    margin-bottom: 26px;
+    padding: 10px;
+    font-weight: bold;
+    
+}
+
+.opensim-brand {
+    font-size: 30px;
+}
+
+.sub-title {
+    display: block;
+    padding: 10px;
+    font-weight: bold;
+    font-family:alef;
+}
+
+.docs-content {
+    font-size: 18px;
+}
+.docs-content img{
+    display: block;
+}
+
+.img-right{
+    margin-left:auto;
+}
+
+.img-center{
+    margin-left:auto;
+    margin-right: auto;
+    width:100%;
+}
+
 ul {
     list-style: none;
-
     padding: 0;
 }
 
-li {
-    margin: 5px;
-}
 
 .credits {
     text-align: right;

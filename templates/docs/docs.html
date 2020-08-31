@@ -1,0 +1,20 @@
+{% extends "components/docs.html" %}
+{% block content %}
+Welcome to the OpenSimulator documentation!  <br> 
+This is actually a mirror of the wiki at <a href="http://opensimulator.org/wiki/Main_Page">opensimulator.org </a>, with some information added and repackaged to be more user friendly.
+
+<h1> What Is OpenSimulator? </h1>
+OpenSimulator is an open source virtual environment server. Similar to SecondLife, users can create avatars, chat, and explore realms, though unlike other virtual world platforms, OpenSimulator is decentralized, meaning that there is no one company or organization running it. This means that anyone can create and run their own server of OpenSimulator, and set it up with their own rules and tweaks. Because of this, the network of openSimulator is owned by everybody, and is maintained and run by the people who use it.
+<h1> What is a grid? </h1> 
+A grid can be thought of as a kind of "solar system" within OpenSimulator. Each grid is held together by a <a href="http://opensimulator.org/wiki/ROBUST"><b>ROBUST</b></a> server that manages user data, inventories, and models. These servers don't host any regions that can be visited, and can be thought of as the sun at the center of the solar system. 
+<img src="static/images/grid.svg">
+<br>
+<b>Simulators</b> can be thought of as the habitable planets orbiting around the sun. Each simulator contains one or more <b>regions</b>, and is in charge of running the version of openSimulator that each region within it uses. Each simulator can be drastically different from another, in terms of what software they run and how their regions look and feel. Unlike user accounts, simulators are not bound to the grid they are attached to. They can be removed from a grid, or join another, as they belong to the people who created the simulator, not neccesarily the people who made the grid. 
+<img class="img-center" src="static/images/planets.svg">
+<br>
+<b>Regions</b> are the part of the grid that users can explore and interact with. They are persistent, user built 3d worlds. Regions can be thought of as the continents and land on each planet in the solar system. 
+<img class="img-center" src="static/images/blue-planet.svg">
+Grids are treated like your home in OpenSimulator. When you join a grid, your online identity like your avatar and your inventory are  managed by that grid. 
+Users on the same grid can chat and visit the regions within that grid. However, users can also leave their home grid and seamlessly visit users and regions on other grids as well, becoming part of a larger metaverse network. Of course, if a grid doesn't want to, it doesn't have to join. This is in the hands of the users and the community that runs it.
+<img class = "img-center" src="static/images/constellation.svg">
+{% endblock %}

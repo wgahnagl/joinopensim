@@ -1,0 +1,26 @@
+{% extends "components/base.html" %}
+    {% block body %}
+        <div class = "sidebar-container sidebar-layout"> 
+            <nav class = "sidebar"> 
+                <a class="opensim-brand" href="/docs">OpenSimulator</a>
+                <ul>
+                    <li>
+                        <a class="active sub-title" href="/docs"> What Is OpenSimulator? </a>
+                    </li>
+                    <li>
+                        <span class="sub-title"> Using OpenSimulator</span> 
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="/docs/user/signup"> Signing up for an account </a>
+                            </li>
+                        </ul>
+                </ul>
+            </nav>
+            
+            <div class="docs-content">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+{% endblock %}
+

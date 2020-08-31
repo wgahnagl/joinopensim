@@ -54,6 +54,10 @@ def getSiteData():
     print("getting grid data")
     getGridData()
 
+def getWikiPageMain():
+    print("getting main wiki page")
+    getWikiData("Main_Page")
+
 def getWikiData(page):
     if not os.path.isdir('sites/wiki'):
         os.mkdir('sites/wiki')
@@ -176,7 +180,8 @@ def getGridData():
     gridStats.close()
 
 sched = BackgroundScheduler(daemon=True)
-sched.add_job(getSiteData,'interval',minutes=1440)
+sched.add_job(getGridData,'cron', hour=0)
+sched.add_job(getWikiPageMain,'cron', day=5)
 sched.start()
 
 def before_request(func):
@@ -202,6 +207,12 @@ def render_main(info=None):
 @before_request
 def render_start(info=None):
     return render_template('start.html', info=info)
+
+@app.route('/docs')
+@before_request
+def render_docs(info=None):
+    return render_template('docs/docs.html', info=info)
+
 
 if __name__ == '__main__':
     app.run('0.0.0.0', 8085)
