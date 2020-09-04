@@ -1,0 +1,6 @@
+config
+requests
+flask
+BeautifulSoup4
+apscheduler
+flask_sqlalchemy
