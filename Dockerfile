@@ -1,20 +1,24 @@
-FROM ubuntu:16.04
+FROM fedora:latest
 
-MAINTANER Your Name "wgahnagl@protonmail.com"
+RUN useradd -u 5000 app
 
-RUN apt-get update -y && \
-    apt-get install -y python-pip python-dev
-
+RUN dnf update -y && \
+    dnf install -y python-pip 
 # We copy just the requirements.txt first to leverage Docker cache
+
+USER app:app
+ENV PATH="/home/app/.local/bin:${PATH}"
+
+
 COPY ./requirements.txt /app/requirements.txt
 
 WORKDIR /app
 
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt --user
 
 COPY . /app
 
-ENTRYPOINT [ "python" ]
+ENTRYPOINT [ "python3" ]
 
 CMD [ "app.py" ]
 
