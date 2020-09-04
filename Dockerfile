@@ -1,5 +1,6 @@
 FROM ubuntu:16.04
 
+MAINTANER Your Name "wgahnagl@protonmail.com"
 
 RUN apt-get update -y && \
     apt-get install -y python-pip python-dev
@@ -15,5 +16,5 @@ COPY . /app
 
 ENTRYPOINT [ "python" ]
 
-CMD [ "init.py" ]
+CMD [ "app.py" ]
 
